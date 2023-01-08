@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
-export default function Benefits(props) {
+export default function Benefits(props: any) {
   const { data } = props;
 
   return (
@@ -18,8 +18,6 @@ export default function Benefits(props) {
               width="521"
               height="482"
               alt="Benefits"
-              layout="intrinsic"
-              placeholder="blur"
             />
           </div>
         </div>
@@ -40,7 +38,7 @@ export default function Benefits(props) {
             </div>
 
             <div className="w-full mt-5">
-              {data.bullets.map((item, index) => (
+              {data.bullets.map((item: { title: any; icon: any; desc: any; }, index: any) => (
                 <Benefit key={index} title={item.title} icon={item.icon}>
                   {item.desc}
                 </Benefit>

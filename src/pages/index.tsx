@@ -26,12 +26,12 @@ import PopupWidget from "../components/popupWidget";
 
 export default function Home() {
   return (
-    <div className="bg-[#EBEBEB] dark:bg-[#151718]">
+    <div className="bg-[#151718]">
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>AnVel</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="AnVel"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -52,7 +52,7 @@ export default function Home() {
         title="Learn how to fullfil your needs">
         This section is to highlight a promo or demo video of your product.
         Analysts says a landing page with video has 3% more conversion rate. So,
-        don't forget to add one. Just like this.
+        don forget to add one. Just like this.
       </SectionTitle>
       <Video />
       <SectionTitle

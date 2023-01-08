@@ -17,7 +17,7 @@ export default function PopupWidget() {
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data, e) => {
+  const onSubmit = async (data: any, e: any) => {
     console.log(data);
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -104,7 +104,7 @@ export default function PopupWidget() {
               enterFrom="opacity-0 translate-y-5"
               leave="transition duration-200 transform ease"
               leaveTo="opacity-0 translate-y-5">
-              <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
+              <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
                   <h3 className="text-lg text-white">How can we help?</h3>
                   <p className="text-white opacity-50">
@@ -138,7 +138,7 @@ export default function PopupWidget() {
                       <div className="mb-4">
                         <label
                           htmlFor="full_name"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                          className="block mb-2 text-sm text-gray-400">
                           Full Name
                         </label>
                         <input
@@ -157,7 +157,7 @@ export default function PopupWidget() {
                         />
                         {errors.name && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.name.message}
+                            {errors?.name?.message as string}
                           </div>
                         )}
                       </div>
@@ -165,7 +165,7 @@ export default function PopupWidget() {
                       <div className="mb-4">
                         <label
                           htmlFor="email"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                          className="block mb-2 text-sm text-gray-400">
                           Email Address
                         </label>
                         <input
@@ -188,7 +188,7 @@ export default function PopupWidget() {
 
                         {errors.email && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.email.message}
+                            {errors?.name?.message as string}
                           </div>
                         )}
                       </div>
@@ -196,12 +196,12 @@ export default function PopupWidget() {
                       <div className="mb-4">
                         <label
                           htmlFor="message"
-                          className="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                          className="block mb-2 text-sm text-gray-400">
                           Your Message
                         </label>
 
                         <textarea
-                          rows="4"
+                          rows={4}
                           id="message"
                           {...register("message", {
                             required: "Enter your Message",
@@ -215,7 +215,7 @@ export default function PopupWidget() {
                           required></textarea>
                         {errors.message && (
                           <div className="mt-1 text-sm text-red-400 invalid-feedback">
-                            {errors.message.message}
+                            {errors?.name?.message as string}
                           </div>
                         )}
                       </div>

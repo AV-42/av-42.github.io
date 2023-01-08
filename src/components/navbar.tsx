@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
 
 export default function Navbar() {
@@ -9,7 +8,6 @@ export default function Navbar() {
     "FEATURES",
     "PRICING",
     "COMPANY",
-    "BLOG",
   ];
 
   return (
@@ -21,7 +19,7 @@ export default function Navbar() {
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/" legacyBehavior>
-                  <a className="flex items-center space-x-2 text-2xl font-medium text-primary600 dark:text-gray-100">
+                  <a className="flex items-center space-x-2 text-2xl font-medium text-gray-100">
                     <span>
                       <Image
                         src="/img/logo.svg"
@@ -37,7 +35,7 @@ export default function Navbar() {
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-primary600 focus:text-primary600 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
+                  className="px-2 py-1 ml-auto rounded-md lg:hidden hover:text-primary600 focus:text-primary600 focus:outline-none text-gray-300 focus:bg-trueGray-700">
                   <svg
                     className="w-6 h-6 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +60,7 @@ export default function Navbar() {
                   <>
                     {navigation.map((item, index) => (
                       <Link key={index} href="/" legacyBehavior>
-                        <a className="w-full text-sm px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-primary600 focus:text-primary600 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none dark:focus:bg-trueGray-700">
+                        <a className="w-full text-sm px-4 py-2 -ml-4 rounded-md text-gray-300 hover:text-primary600 focus:text-primary600  focus:outline-none focus:bg-trueGray-700">
                           {item}
                         </a>
                       </Link>
@@ -85,7 +83,7 @@ export default function Navbar() {
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link href="/" legacyBehavior>
-                  <a className="inline-block px-4 py-2 text-sm font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-primary600 focus:text-primary600 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                  <a className="inline-block px-4 py-2 text-sm font-normal no-underline rounded-md text-gray-200 hover:text-primary600 focus:text-primary600 focus:outline-none focus:bg-gray-800">
                     {menu}
                   </a>
                 </Link>
@@ -101,7 +99,6 @@ export default function Navbar() {
             </a>
           </Link>
 
-          <ThemeChanger />
         </div>
       </nav>
     </div>
