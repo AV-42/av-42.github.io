@@ -9,7 +9,6 @@ export default function Footer() {
     "Features",
     "Pricing",
     "Company",
-    "Blog",
   ];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
@@ -36,9 +35,7 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-400">
-              Nextly is a free landing page & marketing website
-              template for startups and indie projects. Its built with
-              Next.js & TailwindCSS. And its completely open-source.
+              Smart Advertising on Web 3.0
             </div>
           </div>
 
@@ -102,6 +99,7 @@ export default function Footer() {
         <div className="my-10 text-sm text-center text-gray-400">
           AnVel Copyright © {new Date().getFullYear()}.
         </div>
+        
       </Container>
     </div>
   );
