@@ -13,6 +13,8 @@
      return (
        <Html lang="en">
          <Head>
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2272900763374613"
+          crossOrigin="anonymous"></script>
          <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/favicon.ico" />
           <meta
