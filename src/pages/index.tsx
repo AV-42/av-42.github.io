@@ -40,6 +40,19 @@ export default function Home() {
         title="Why should you use our platform?">
         Solving the web advertising engagement problem.
       </SectionTitle>
+      <>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2272900763374613"
+     crossOrigin="anonymous"></script>
+          <ins className="adsbygoogle"
+          style={{display: "block"}}
+          data-ad-client="ca-pub-2272900763374613"
+          data-ad-slot="7392379014"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+      </> 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
